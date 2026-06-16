@@ -64,6 +64,8 @@ outputs:
       commands:
         - cmake ${CMAKE_ARGS} -GNinja test
         - cmake --build .
+        - ./c_all_headers
+        - ./cxx_all_headers
         - test -f $PREFIX/include/nvpl_scalapack.h
         - test -f $PREFIX/lib/cmake/nvpl_scalapack/nvpl_scalapack-config.cmake
         - test -f $PREFIX/lib/libnvpl_scalapack_ilp64.so
